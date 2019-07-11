@@ -1,0 +1,11 @@
+{
+  "name": "@ryanlsmith/string_lib",
+  "version": "1.0.0",
+  "description": "A string Library for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Smith",
+  "license": "ISC"
+}

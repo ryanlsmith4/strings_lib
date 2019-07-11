@@ -1,0 +1,1 @@
+![npm bundle size](https://img.shields.io/bundlephobia/min/@ryanlsmith/string_lib  .svg)
