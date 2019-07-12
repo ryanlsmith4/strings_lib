@@ -15,8 +15,9 @@ String.prototype.allCaps = function () {
 }
 
 /// CAPITALIZE WORDS ///
-String.prototype.allWords = function () {
-    return this.split(' ').map(word => word.firstCharToUpper().join(' '));
+String.prototype.allFirstUpper = function () {
+    let listUpper =  this.split(' ').map(word => word.firstLetterCap())
+    return listUpper.join(' ');
 }
 
 /// ODD CAPS ///
@@ -58,14 +59,16 @@ String.prototype.snakeCases = function () {
 
 /// CAMELCASE ///
 String.prototype.camelCase = function () {
-    newWord = '';
-    if (this[0] == this[0].toLowerCase()) {
-
-        newWord += this[0].toLowerCase();
-
-    }
+    return this.split(' ').map(function(word, index) {
+    // If it is the first word make sure to lowercase all the chars.
+        if (index == 0) {
+            return word.toLowerCase();
+        }
+        else {
+        // If it is not the first word only upper case the first char and lowercase the rest.
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+        }
+    }).join('')
 }
 
-let test = "Hellow Be A PERSONS";
-
-console.log(test.snakeCases())
+// console.log('this should cap all first letters'.allFirstUpper())

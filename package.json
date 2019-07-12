@@ -1,11 +1,18 @@
 {
   "name": "@ryanlsmith/string_lib",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A string Library for node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanlsmith4/strings_lib"
   },
   "author": "Ryan Smith",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^6.1.4"
+  }
 }
