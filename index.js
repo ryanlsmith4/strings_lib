@@ -8,7 +8,7 @@
  *  "this".capitalize() -> "This"
  */
 String.prototype.firstLetterCap = function () {
-    if (this.length == 0) {
+    if (this.length === 0) {
         return '';
     }
     return this.charAt(0).toUpperCase() + this.slice(1);
@@ -22,7 +22,7 @@ String.prototype.firstLetterCap = function () {
  *  "this".allCaps() -> "THIS"
  */
 String.prototype.allCaps = function () {
-    if (this.length == 0) {
+    if (this.length === 0) {
         return '';
     }
     return this.toUpperCase();

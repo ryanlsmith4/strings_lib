@@ -1,7 +1,4 @@
-// 'use strict';
 
-// require('mocha');
-// const assert = require('assert');
 require('./');
 
     test('Smoke Test', () => {
