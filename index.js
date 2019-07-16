@@ -1,4 +1,6 @@
-/// CAPITALIZE FIRST LETTER ///
+/* A String Library for Javascript */
+
+/** This Function returns the Strings First letter Capitalized*/
 String.prototype.firstLetterCap = function () {
     if (this.length == 0) {
         return '';
@@ -6,7 +8,7 @@ String.prototype.firstLetterCap = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
  }
 
-/// CAPITALIZE ALL LETTERS ///
+/** This Function returns the whole String Capitalized*/
 String.prototype.allCaps = function () {
     if (this.length == 0) {
         return '';
@@ -14,13 +16,13 @@ String.prototype.allCaps = function () {
     return this.toUpperCase();
 }
 
-/// CAPITALIZE WORDS ///
+/** This Function returns all the first letters of words Capitalized*/
 String.prototype.allFirstUpper = function () {
     let listUpper =  this.split(' ').map(word => word.firstLetterCap())
     return listUpper.join(' ');
 }
 
-/// ODD CAPS ///
+/** This Function returns all odds Capitalized*/
 String.prototype.oddCaps = function () {
     let newString = '';
     for (i = 0; i < this.length; i++) {
@@ -34,7 +36,7 @@ String.prototype.oddCaps = function () {
     return newString;
 }
 
-/// EVEN CAPS ///
+/** This Function returns all evens Capitalized*/
 String.prototype.evenCaps = function () {
     let newString = '';
     for (i = 0; i < this.length; i++) {
@@ -47,17 +49,17 @@ String.prototype.evenCaps = function () {
     }
     return newString;
 }
-/// REMOVE EXTRA SPACES ///
+/** This Function returns the string with all spaces removed*/
 String.prototype.removeExtraSpaces = function (x = '') {
     return this.replace(/\s/g,x)
 }
 
-/// SNAKECASES ///
+/** This Function returns the strings in snake_casing*/
 String.prototype.snakeCases = function () {
     return this.removeExtraSpaces('_')
 }
 
-/// CAMELCASE ///
+/** This Function returns the strings in camelCase*/
 String.prototype.camelCase = function () {
     return this.split(' ').map(function(word, index) {
     // If it is the first word make sure to lowercase all the chars.
@@ -71,4 +73,3 @@ String.prototype.camelCase = function () {
     }).join('')
 }
 
-// console.log('this should cap all first letters'.allFirstUpper())
