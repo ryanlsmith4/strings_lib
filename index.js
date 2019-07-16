@@ -1,4 +1,4 @@
-/* A String Library for Javascript */
+/* A String Library for npm */
 
 /** This Function returns the Strings First letter Capitalized*/
 String.prototype.firstLetterCap = function () {
