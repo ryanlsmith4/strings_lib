@@ -1,6 +1,6 @@
 {
   "name": "@ryanlsmith/string_lib",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A string Library for node",
   "main": "index.js",
   "scripts": {
