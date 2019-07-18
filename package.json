@@ -4,7 +4,8 @@
   "description": "A string Library for node",
   "main": "index.js",
   "scripts": {
-    "test": "jest.js"
+    "test": "jest.js",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
