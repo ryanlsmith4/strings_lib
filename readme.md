@@ -1,5 +1,5 @@
 
-![Travis (.org)](https://img.shields.io/travis/C3NZ/string-lib.svg?style=plastic)
+[![Build Status](https://travis-ci.com/ryanlsmith4/strings_lib.svg?branch=master)](https://travis-ci.com/ryanlsmith4/strings_lib)
 
 [![Coverage Status](https://coveralls.io/repos/github/ryanlsmith4/strings_lib/badge.svg?branch=master)](https://coveralls.io/github/ryanlsmith4/strings_lib?branch=master)
 
