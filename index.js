@@ -12,7 +12,7 @@ String.prototype.firstLetterCap = function () {
         return '';
     }
     return this.charAt(0).toUpperCase() + this.slice(1);
- }
+};
 
 /**
  * Uppercase every character within the string.
@@ -26,7 +26,7 @@ String.prototype.allCaps = function () {
         return '';
     }
     return this.toUpperCase();
-}
+};
 
 /**
  * Uppercase every word within the string
@@ -35,9 +35,9 @@ String.prototype.allCaps = function () {
  *  "this word".capitalizeWords() -> "This Word"
  */
 String.prototype.allFirstUpper = function () {
-    let listUpper =  this.split(' ').map(word => word.firstLetterCap())
+    let listUpper =  this.split(' ').map(word => word.firstLetterCap());
     return listUpper.join(' ');
-}
+};
 
 /**
  * Uppercase every other odd character not including white space.
@@ -57,7 +57,7 @@ String.prototype.oddCaps = function () {
         }
     }
     return newString;
-}
+};
 
 /**
  * Uppercase every even character not including white space.
@@ -68,7 +68,7 @@ String.prototype.oddCaps = function () {
  */
 String.prototype.evenCaps = function () {
     let newString = '';
-    for (i = 0; i < this.length; i++) {
+    for (let i = 0; i < this.length; i++) {
         if( i % 2 === 0) {
             newString += this[i].toUpperCase();
         }
@@ -87,7 +87,7 @@ String.prototype.evenCaps = function () {
  *  "   this  word    ".removeExtraWhiteSpace() -> "this word"
  */
 String.prototype.removeExtraSpaces = function (x = '') {
-    return this.replace(/\s/g,x)
+    return this.replace(/\s/g,x);
 }
 
 /**
@@ -98,8 +98,8 @@ String.prototype.removeExtraSpaces = function (x = '') {
  *  "snake this!".kabobCase() -> "snake_case!"
  */
 String.prototype.snakeCases = function () {
-    return this.removeExtraSpaces('_')
-}
+    return this.removeExtraSpaces('_');
+};
 
 /**
  * Convert the current string to camel case if it has spaces.
@@ -116,8 +116,8 @@ String.prototype.camelCase = function () {
         }
         else {
         // If it is not the first word only upper case the first char and lowercase the rest.
-            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
         }
-    }).join('')
-}
+    }).join('');
+};
 
