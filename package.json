@@ -2,10 +2,17 @@
   "name": "@ryanlsmith/string_lib",
   "version": "2.1.4",
   "description": "A string Library for node",
-  "main": "index.js",
+  "main": "umd/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "esm/*",
+    "emd/*"
+  ],
   "scripts": {
+    "prepare": "rollup --config",
     "test": "jest",
-    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "rollup": "rollup --config"
   },
   "repository": {
     "type": "git",
@@ -20,7 +27,9 @@
     "codecov": "^3.5.0",
     "coveralls": "^3.0.5",
     "eslint": "^6.0.1",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "rollup": "^1.17.0",
+    "rollup-plugin-terser": "^5.1.1"
   },
   "jest": {
     "coverageDirectory": "./coverage/",

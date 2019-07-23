@@ -48,7 +48,7 @@ String.prototype.allFirstUpper = function () {
  */
 String.prototype.oddCaps = function () {
     let newString = '';
-    for (i = 0; i < this.length; i++) {
+    for (let i = 0; i < this.length; i++) {
         if( i % 2 != 0) {
             newString += this[i].toUpperCase();
         }
@@ -77,7 +77,7 @@ String.prototype.evenCaps = function () {
         }
     }
     return newString;
-}
+};
 
 /**
  * Remove any extra whitespace throughout the string.
@@ -88,7 +88,7 @@ String.prototype.evenCaps = function () {
  */
 String.prototype.removeExtraSpaces = function (x = '') {
     return this.replace(/\s/g,x);
-}
+};
 
 /**
  * Snake case the current string if it has spaces.
@@ -121,3 +121,67 @@ String.prototype.camelCase = function () {
     }).join('');
 };
 
+/**
+ *  Randomly color text output
+ * @function
+ * @returns {String} input returns as colored text
+ */
+String.prototype.colorMe = function () {
+    const colorsDict = { 
+        Reset : '\x1b[0m',
+        Bright : '\x1b[1m',
+        Dim : '\x1b[2m',
+        Underscore : '\x1b[4m',
+        Blink : '\x1b[5m',
+        Reverse : '\x1b[7m',
+        Hidden : '\x1b[8m',       
+        FgBlack : '\x1b[30m',
+        FgRed : '\x1b[31m',
+        FgGreen : '\x1b[32m',
+        FgYellow : '\x1b[33m',
+        FgBlue : '\x1b[34m',
+        FgMagenta : '\x1b[35m',
+        FgCyan : '\x1b[36m',
+        FgWhite : '\x1b[37m',
+        BgBlack : '\x1b[40m',
+        BgRed : '\x1b[41m',
+        BgGreen : '\x1b[42m',
+        BgYellow : '\x1b[43m',
+        BgBlue : '\x1b[44m',
+        BgMagenta : '\x1b[45m',
+        BgCyan : '\x1b[46m',
+        BgWhite : '\x1b[47m', 
+    };
+    let keys = [];
+    for (let prop in colorsDict) {
+        // console.log(prop);
+        keys.push(prop);
+      
+    }
+
+    let randomColor = keys[keys.length * Math.random() << 0];
+    // console.log('color:', color);
+    // console.log('colorsDict:', Object.keys(colorsDict));
+    let color = colorsDict[randomColor];
+    console.log(this + color);
+    // console.log(this)
+    // return this + color;
+
+};
+
+/**
+ * Take input and return it enrypted
+ * @function
+ * @returns {String} input that is encrypted
+ * @example
+ * "Cool words that get encrypted".encrypt() -> ""
+ */
+
+/** 
+ * Take input and decrypt it if it was encrypted by .encrypt()
+ * @function
+ * @returns {String} input is decrypted
+ *  
+ * */
+
+// console.log('HelloWorld'.oddCaps());
