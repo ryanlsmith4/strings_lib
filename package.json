@@ -1,6 +1,6 @@
 {
   "name": "@ryanlsmith/string_lib",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "A string Library for node",
   "main": "umd/index.js",
   "module": "esm/index.js",

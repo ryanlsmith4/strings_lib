@@ -5,7 +5,7 @@
  * @function
  * @returns {String} The capitalized version of the current string.
  * @example
- *  "this".capitalize() -> "This"
+ *  "this".() -> "This"
  */
 String.prototype.firstLetterCap = function () {
     if (this.length === 0) {

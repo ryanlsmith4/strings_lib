@@ -3,6 +3,7 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/ryanlsmith4/strings_lib/badge.svg?branch=master)](https://coveralls.io/github/ryanlsmith4/strings_lib?branch=master)
 
+[![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](https://forthebadge.com)
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/@ryanlsmith/string_lib.svg)
 
